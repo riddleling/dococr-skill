@@ -38,7 +38,11 @@ Use $dococr-skill to explain how docOCR's /api/ocr endpoint works.
 ```
 
 ```text
-Use $dococr-skill to OCR ~/Desktop/book_imgs/01.png and output Markdown.
+Use $dococr-skill to OCR /path/to/Desktop/book_imgs/01.png and output Markdown.
+```
+
+```text
+Use $dococr-skill to OCR /path/to/Desktop/book_imgs/01.png through the local API at http://127.0.0.1:8080/api/ocr and return the Markdown text.
 ```
 
 ```text
