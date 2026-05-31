@@ -1,0 +1,4 @@
+interface:
+  display_name: "docOCR"
+  short_description: "Work with docOCR CLI, API, and OCR workflows"
+  default_prompt: "Use $dococr-skill to answer docOCR setup, usage, API, OCR, or troubleshooting questions."

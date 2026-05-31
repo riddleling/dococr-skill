@@ -1,0 +1,29 @@
+# macOS
+.DS_Store
+._*
+
+# Editor and IDE state
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+tmp/
+temp/
+
+# Local environment files
+.env
+.env.*
+
+# Python cache, in case validation scripts or local helpers are added later
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Node dependencies, in case local tooling is added later
+node_modules/
+
