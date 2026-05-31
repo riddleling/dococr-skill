@@ -1,6 +1,6 @@
 ---
 name: dococr-skill
-description: Use when working with docOCR, a macOS local OCR-to-Markdown tool, including README-grounded usage help, CLI batch conversion, local HTTP server usage, JSON OCR API examples, OCR execution, and troubleshooting.
+description: Use when working with docOCR, a macOS local OCR-to-Markdown tool, including README-grounded usage help, CLI OCR to stdout, batch Markdown file output, local HTTP server usage, JSON OCR API examples, OCR execution, and troubleshooting.
 ---
 
 # docOCR
@@ -9,7 +9,8 @@ description: Use when working with docOCR, a macOS local OCR-to-Markdown tool, i
 
 docOCR is a macOS command-line OCR tool that converts document images into Markdown text. It can run as:
 
-- A batch CLI tool that writes `.md` files next to input images.
+- A CLI tool that prints OCR Markdown to stdout when called with image paths.
+- A batch CLI tool that writes `.md` files next to input images when called with `-o`.
 - A local Vapor HTTP server with a browser upload page.
 - A JSON upload API for local clients.
 
@@ -32,12 +33,17 @@ docOCR -h
 docOCR --help
 docOCR -V
 docOCR --version
+docOCR ~/Desktop/book_imgs/*.jpg
 docOCR -o ~/Desktop/book_imgs/*.jpg
 docOCR -s
 docOCR -s -p 8000
 ```
 
-The `-s` server mode and `-o` batch conversion mode are mutually exclusive. Batch OCR writes Markdown next to each source image with the same basename and a `.md` extension, overwriting existing matching `.md` files.
+Calling `docOCR` with only image paths prints OCR Markdown to stdout. Use this mode when the user asks to see or capture the OCR result directly.
+
+The `-o` option writes Markdown next to each source image with the same basename and a `.md` extension, overwriting existing matching `.md` files. Use `-o` when the user asks to generate files.
+
+The `-s` server mode and `-o` file-output mode are mutually exclusive.
 
 If `docOCR` is not found on `PATH`, direct the user to the docOCR project repository for installation instructions.
 
