@@ -2,14 +2,14 @@
 
 `dococr-skill` is a Codex skill for working with [docOCR](https://github.com/riddleling/docOCR).
 
-The docOCR project repository is [riddleling/docOCR](https://github.com/riddleling/docOCR). docOCR is a local macOS OCR-to-Markdown tool. It can convert images in batch from the CLI, run a local HTTP server, and expose a JSON OCR API at `/api/ocr`.
+The docOCR project repository is [riddleling/docOCR](https://github.com/riddleling/docOCR). docOCR is a local macOS OCR-to-Markdown tool. It can print OCR Markdown to stdout from the CLI, write `.md` files with `-o`, run a local HTTP server, and expose a JSON OCR API at `/api/ocr`.
 
 ## Purpose
 
 This skill gives Codex reusable context and workflows for docOCR-related tasks, including:
 
 - Explaining docOCR CLI, server, and API usage.
-- Running docOCR on images and producing Markdown output.
+- Running docOCR on images and returning Markdown from stdout or writing `.md` files.
 - Debugging local API, multipart upload, port, or server startup issues.
 
 ## Installation
@@ -38,7 +38,11 @@ Use $dococr-skill to explain how docOCR's /api/ocr endpoint works.
 ```
 
 ```text
-Use $dococr-skill to OCR /path/to/Desktop/01.png and output Markdown.
+Use $dococr-skill to OCR /path/to/Desktop/01.png and return the Markdown printed by docOCR.
+```
+
+```text
+Use $dococr-skill to OCR /path/to/Desktop/01.png with docOCR -o and write the Markdown file next to the image.
 ```
 
 ```text
